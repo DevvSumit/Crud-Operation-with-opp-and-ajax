@@ -1,0 +1,105 @@
+
+    :root {
+        --bg: #f4f7fb;
+        --card: #ffffff;
+        --accent: #4f46e5;
+        --muted: #6b7280;
+    }
+
+    * {
+        box-sizing: border-box
+    }
+
+    body {
+        margin: 0;
+        font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        background: linear-gradient(180deg, var(--bg), #eef2ff 60%);
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 32px;
+    }
+
+    .card {
+        background: var(--card);
+        width: 100%;
+        max-width: 440px;
+        padding: 28px;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+    }
+
+    h1 {
+        margin: 0 0 8px 0;
+        font-size: 20px;
+        color: #0f172a;
+    }
+
+    p.lead {
+        margin: 0 0 18px 0;
+        color: var(--muted);
+        font-size: 13px;
+    }
+
+    form {
+        display: grid;
+        gap: 12px
+    }
+
+    label {
+        font-size: 13px;
+        color: #111827
+    }
+
+    .input,
+    .file-input {
+        width: 100%;
+        padding: 10px 12px;
+        border-radius: 8px;
+        border: 1px solid #e6e9ef;
+        font-size: 14px;
+        outline: none;
+        transition: box-shadow .12s, border-color .12s;
+        background: transparent;
+    }
+
+    .input:focus,
+    .file-input:focus {
+        border-color: var(--accent);
+        box-shadow: 0 4px 18px rgba(79, 70, 229, 0.12)
+    }
+
+    .row {
+        display: flex;
+        gap: 10px
+    }
+
+    .btn {
+        display: inline-block;
+        padding: 10px 14px;
+        border-radius: 8px;
+        border: none;
+        background: var(--accent);
+        color: #fff;
+        font-weight: 600;
+        cursor: pointer;
+        font-size: 14px;
+    }
+
+    .muted {
+        font-size: 12px;
+        color: var(--muted)
+    }
+
+    .note {
+        font-size: 12px;
+        color: #374151;
+        margin-top: 6px
+    }
+
+    @media (max-width:480px) {
+        .card {
+            padding: 18px
+        }
+    }
